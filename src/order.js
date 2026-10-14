@@ -10,11 +10,10 @@ module.exports = { formatOrder };
 // Remove the // at the start of each line below, then push.
 //
 function receipt(name, prices) {
-  var total = totalPrice(prices);
-  if (prices.length == 0) {
+  const total = totalPrice(prices);
+  if (prices.length === 0) {
     return name + ' ordered nothing';
   }
-  const note = 'thank you';
   return name + ' pays ' + total;
 }
 module.exports.receipt = receipt;
